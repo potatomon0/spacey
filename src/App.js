@@ -1,22 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
 import axios from 'axios'
 import React,{useEffect,useState} from 'react';
 import Images from './components/Images'
 
 function App() {
-  const [data,setData] = useState([])
-  const getData = async()=>{
-    let response = await axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=2023-08-10&end_date=2023-08-23')
-    console.log(response.data)
-    // setData(response.data)
+  const [data, setData] = useState([0])
+  const getData = async () =>
+  {
+    await axios.get('https://api.nasa.gov/planetary/apod?api_key=K9vc50ZRLMSuAdILI5KKxBj2TDzBfKd3HA11WprL&start_date=2023-08-10&end_date=2023-08-23')
+    .then(res =>
+      {
+        console.log(res.data)
+        setData(res.data)
+      })
+      .catch(err =>
+        {
+          console.log(err)
+        })
   }
+
   useEffect(()=>{
     getData()
   },[])
   return (
     <div className="App">
-      {/* <Images data={data}/> */}
+      <Images data={data}/>
     </div>
   );
 }
