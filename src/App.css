@@ -17,12 +17,13 @@ html,body{
   margin:10px;
   width: 50%;
   height: 400px;
+  border-radius: 8px;
 }
 
-.title {
-  /* border: solid purple; */
+/* .title {
+  border: solid purple;
 
-}
+} */
 
 .description {
   /* border: solid orange; */
