@@ -1,26 +1,44 @@
-.wrapper
-{
-  border: solid green;
+html,body{
+  background-color: rgb(19, 19, 88);
+  color:white;
+}
+.wrapper {
+  /* border: solid green; */
+  padding:20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.info{
+  display:flex;
+}
+.pic {
+  /* border: solid blue; */
+  margin:10px;
+  width: 50%;
+  height: 400px;
 }
 
-.imgBox
-{
-  border: solid red;
+.title {
+  /* border: solid purple; */
+
 }
 
-.pic
-{
-  border: solid blue;
-  width: 500px;
-  height: 500px;
+.description {
+  /* border: solid orange; */
+  margin:20px;
+  width:50%;
 }
 
-.title
-{
-  border: solid purple;
+.buttonBox{
+  display:flex;
+  justify-content: space-around;
+  /* border:solid red; */
+  width:350px;
+  height:50px;
+  align-items: center;
 }
-
-.description
-{
-  border: solid orange;
+button{
+  height:30px;
+  color:rgb(19, 19, 88);
 }
