@@ -5,11 +5,11 @@ function Images(props) {
   const [count, setCount] = useState(0)
 
   const plus = () => {
-    if (count >= 14) {
-      return
+    if (count < props.data.length-1) {
+      setCount(count + 1)
     }
     else {
-      setCount(count + 1)
+      return
     }
   }
 
